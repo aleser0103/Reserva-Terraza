@@ -303,7 +303,20 @@ function cargarReservas() {
     if (Array.isArray(data)) {
       for (var i = 0; i < data.length; i++) {
         var r = data[i];
-        if (r.fecha) reservas.push({ clave: r.fecha, slot: r.slot, apt: r.apt, nombre: r.nombre, tipo: r.tipo, personas: r.personas });
+        if (r.fecha) {
+          // Convert any date format to YYYY-MM-DD
+          var clave = r.fecha;
+          if (clave.length > 10) {
+            var dt = new Date(clave);
+            if (!isNaN(dt.getTime())) {
+              var yy = dt.getFullYear();
+              var mm = dt.getMonth() + 1;
+              var dd = dt.getDate();
+              clave = yy + '-' + (mm < 10 ? '0'+mm : ''+mm) + '-' + (dd < 10 ? '0'+dd : ''+dd);
+            }
+          }
+          reservas.push({ clave: clave, slot: r.slot, apt: r.apt, nombre: r.nombre, tipo: r.tipo, personas: r.personas });
+        }
       }
     }
     renderCalendario();
