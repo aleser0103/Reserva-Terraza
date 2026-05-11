@@ -295,52 +295,38 @@ function esFinde(y, m, d) { var dia = new Date(y, m, d).getDay(); return dia ===
 function cargarReservas() {
   var el = document.getElementById('lista-reservas');
   el.innerHTML = '<div class="cargando">&#128197; Cargando reservas...</div>';
-  
-  // JSONP approach
-  var cbName = '_cb' + Date.now();
-  window[cbName] = function(data) {
-    reservas = [];
-    if (Array.isArray(data)) {
-      for (var i = 0; i < data.length; i++) {
-        var r = data[i];
-        if (r.fecha) {
-          // Convert any date format to YYYY-MM-DD
-          var clave = r.fecha;
-          if (clave.length > 10) {
-            var dt = new Date(clave);
-            if (!isNaN(dt.getTime())) {
-              var yy = dt.getFullYear();
-              var mm = dt.getMonth() + 1;
-              var dd = dt.getDate();
-              clave = yy + '-' + (mm < 10 ? '0'+mm : ''+mm) + '-' + (dd < 10 ? '0'+dd : ''+dd);
+  var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(SCRIPT_URL + '?t=' + Date.now());
+  fetch(proxyUrl)
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var parsed = JSON.parse(data.contents);
+      reservas = [];
+      if (Array.isArray(parsed)) {
+        for (var i = 0; i < parsed.length; i++) {
+          var r = parsed[i];
+          if (r.fecha) {
+            var clave = r.fecha;
+            if (clave.length > 10) {
+              var dt = new Date(clave);
+              if (!isNaN(dt.getTime())) {
+                var yy = dt.getFullYear();
+                var mm = dt.getMonth() + 1;
+                var dd = dt.getDate();
+                clave = yy + '-' + (mm < 10 ? '0'+mm : ''+mm) + '-' + (dd < 10 ? '0'+dd : ''+dd);
+              }
             }
+            reservas.push({ clave: clave, slot: r.slot, apt: r.apt, nombre: r.nombre, tipo: r.tipo, personas: r.personas });
           }
-          reservas.push({ clave: clave, slot: r.slot, apt: r.apt, nombre: r.nombre, tipo: r.tipo, personas: r.personas });
         }
       }
-    }
-    renderCalendario();
-    renderLista();
-    delete window[cbName];
-  };
-  
-  var script = document.createElement('script');
-  script.src = SCRIPT_URL + '?callback=' + cbName + '&t=' + Date.now();
-  script.onload = function() {
-    setTimeout(function() {
-      if (window[cbName]) {
-        // callback never fired, show empty
-        window[cbName]([]);
-      }
-    }, 5000);
-  };
-  script.onerror = function() {
-    reservas = [];
-    renderCalendario();
-    el.innerHTML = '<div class="vacio">&#128198; Sin reservas aun</div>';
-    delete window[cbName];
-  };
-  document.head.appendChild(script);
+      renderCalendario();
+      renderLista();
+    })
+    .catch(function(){
+      reservas = [];
+      renderCalendario();
+      el.innerHTML = '<div class="vacio">&#128198; Sin reservas aun</div>';
+    });
 }
 
 function renderCalendario() {
@@ -493,11 +479,7 @@ function enviar() {
   var personas = document.getElementById('personas').value;
   var finde = esFinde(diaSeleccionado.y, diaSeleccionado.m, diaSeleccionado.d);
 
-  var cbName = '_cbSave' + Date.now();
-  window[cbName] = function() { delete window[cbName]; };
-
-  var script = document.createElement('script');
-  script.src = SCRIPT_URL + '?action=save&callback=' + cbName +
+  var saveUrl = SCRIPT_URL + '?action=save' +
     '&apt=' + encodeURIComponent(aptSeleccionado) +
     '&nombre=' + encodeURIComponent(nombre) +
     '&calidad=' + encodeURIComponent(calidad) +
@@ -507,7 +489,9 @@ function enviar() {
     '&tipo=' + encodeURIComponent(tipoSeleccionado) +
     '&personas=' + encodeURIComponent(personas);
 
-  script.onload = script.onerror = function() {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent(saveUrl))
+    .catch(function(){})
+    .then(function() {
     reservas.push({ clave: clave, slot: slotSeleccionado, apt: aptSeleccionado, nombre: nombre, tipo: tipoSeleccionado, personas: personas });
     var fechaStr = diaSeleccionado.d + ' de ' + MESES[diaSeleccionado.m] + ' de ' + diaSeleccionado.y;
     document.getElementById('conf-det').innerHTML =
@@ -523,7 +507,6 @@ function enviar() {
     document.getElementById('confirmacion').className = 'confirmacion visible';
     renderLista();
   };
-  document.head.appendChild(script);
 }
 
 function nuevaReserva() {
