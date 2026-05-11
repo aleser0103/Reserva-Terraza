@@ -20,13 +20,9 @@ textarea{min-height:70px;resize:vertical}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .field{margin-bottom:12px}
 .field:last-child{margin-bottom:0}
-
-/* Apartamentos */
 .apt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:5px}
 .apt-btn{padding:10px 2px;text-align:center;border-radius:8px;border:1.5px solid #CBD5E1;background:#fff;cursor:pointer;font-size:13px;font-weight:700;color:#64748B;width:100%}
 .apt-btn.sel{background:#1A3A6B;border-color:#1A3A6B;color:#fff}
-
-/* Calendario */
 .cal-box{background:#F8FAFC;border-radius:8px;border:1.5px solid #E2E8F0;padding:12px}
 .cal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
 .cal-nav{background:#fff;border:1.5px solid #CBD5E1;border-radius:6px;width:32px;height:32px;cursor:pointer;font-size:18px;font-weight:700;color:#64748B;display:flex;align-items:center;justify-content:center;line-height:1}
@@ -42,8 +38,6 @@ textarea{min-height:70px;resize:vertical}
 .leyenda{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
 .ley{display:flex;align-items:center;gap:4px;font-size:11px;color:#64748B}
 .ley-punto{width:10px;height:10px;border-radius:50%}
-
-/* Slots */
 .slots-titulo{font-size:12px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 6px;display:flex;align-items:center;gap:6px}
 .badge{font-size:11px;padding:2px 7px;border-radius:20px;font-weight:600}
 .b-dia{background:#D6E4F0;color:#1A3A6B}
@@ -53,11 +47,9 @@ textarea{min-height:70px;resize:vertical}
 .slot.noche{border-color:#FCD34D;color:#92400E}
 .slot.sel{background:#1A3A6B;border-color:#1A3A6B;color:#fff}
 .slot.noche.sel{background:#D97706;border-color:#D97706;color:#fff}
-.slot.ocupado{background:#FEE2E2;border-color:#FCA5A5;color:#DC2626;cursor:not-allowed}
+.slot.ocupado{background:#FEE2E2;border-color:#FCA5A5;color:#DC2626;cursor:not-allowed;font-size:11px}
 .slot.bloq{opacity:.3;cursor:not-allowed}
 .nota-noche{font-size:12px;color:#92400E;font-weight:500;margin-bottom:6px;display:none}
-
-/* Actividad */
 .act-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .act-btn{padding:11px 10px;border-radius:8px;border:1.5px solid #CBD5E1;background:#fff;cursor:pointer;display:flex;align-items:center;gap:9px;text-align:left;width:100%}
 .act-btn.sel{border-color:#1A3A6B;background:#EBF3FB}
@@ -65,14 +57,11 @@ textarea{min-height:70px;resize:vertical}
 .act-nom{font-size:13px;font-weight:700;color:#334155;display:block}
 .act-btn.sel .act-nom{color:#1A3A6B}
 .act-sub{font-size:11px;color:#94A3B8;display:block;margin-top:1px}
-
-/* Alertas */
 .alerta{border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.5;display:flex;gap:8px;align-items:flex-start;margin:8px 0;border-left:3px solid transparent}
 .alerta-ico{font-size:15px;flex-shrink:0;margin-top:1px}
 .a-warn{background:#FEF3C7;border-color:#F59E0B;color:#92400E}
 .a-info{background:#EBF3FB;border-color:#2E75B6;color:#1A3A6B}
-
-/* Normas */
+.a-ok{background:#DCFCE7;border-color:#86EFAC;color:#166534}
 .norma-tog{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 0;border-bottom:1px solid #E2E8F0}
 .norma-tog-txt{font-size:13px;font-weight:600;color:#334155;display:flex;align-items:center;gap:6px}
 .flecha{font-size:11px;color:#94A3B8;display:inline-block;transition:transform .2s}
@@ -82,17 +71,11 @@ textarea{min-height:70px;resize:vertical}
 .norma-fila{display:flex;gap:7px;margin-bottom:6px;font-size:13px;color:#334155;line-height:1.5}
 .check{color:#2E75B6;flex-shrink:0;margin-top:1px}
 .norma-ult{border-bottom:none}
-
-/* Aceptar */
 .acepto-box{display:flex;gap:10px;align-items:flex-start;padding:12px;background:#F8FAFC;border-radius:8px;border:1.5px solid #E2E8F0;margin-top:12px}
 .acepto-box input[type=checkbox]{margin-top:2px;width:17px;height:17px;flex-shrink:0;cursor:pointer}
 .acepto-box label{font-size:13px;color:#334155;line-height:1.5;cursor:pointer}
-
-/* Botón enviar */
 .btn-enviar{width:100%;padding:14px;background:#1A3A6B;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-top:10px;font-family:inherit}
 .btn-enviar:disabled{opacity:.4;cursor:not-allowed}
-
-/* Confirmación */
 .confirmacion{display:none;background:#DCFCE7;border:1.5px solid #86EFAC;border-radius:12px;padding:24px 16px;text-align:center;margin-top:10px}
 .confirmacion.visible{display:block}
 .conf-ico{font-size:44px}
@@ -104,8 +87,6 @@ textarea{min-height:70px;resize:vertical}
 .conf-fila span:first-child{color:#64748B}
 .conf-fila span:last-child{font-weight:700;color:#0F172A}
 .btn-nueva{margin-top:12px;background:#fff;border:1.5px solid #86EFAC;border-radius:8px;padding:10px 22px;font-size:13px;font-weight:700;color:#166534;cursor:pointer;font-family:inherit}
-
-/* Lista reservas */
 .res-item{display:flex;align-items:flex-start;gap:9px;padding:10px 0;border-bottom:1px solid #E2E8F0}
 .res-item:last-child{border-bottom:none}
 .res-punto{width:9px;height:9px;border-radius:50%;background:#2E75B6;flex-shrink:0;margin-top:4px}
@@ -113,6 +94,7 @@ textarea{min-height:70px;resize:vertical}
 .res-nom{font-size:13px;font-weight:600;color:#0F172A}
 .res-meta{font-size:12px;color:#64748B;margin-top:2px}
 .vacio{text-align:center;padding:24px;color:#94A3B8;font-size:13px}
+.cargando{text-align:center;padding:16px;color:#64748B;font-size:13px}
 </style>
 </head>
 <body>
@@ -127,7 +109,6 @@ textarea{min-height:70px;resize:vertical}
 
 <div id="area-form">
 
-<!-- RESIDENTE -->
 <div class="card">
   <div class="sec">&#127968; Datos del residente</div>
   <div class="field">
@@ -153,8 +134,8 @@ textarea{min-height:70px;resize:vertical}
       <label for="calidad">Calidad</label>
       <select id="calidad" onchange="cambioCalidad()">
         <option value="">Seleccionar...</option>
-        <option value="propietario">Propietario</option>
-        <option value="arrendatario">Arrendatario</option>
+        <option value="Propietario">Propietario</option>
+        <option value="Arrendatario">Arrendatario</option>
       </select>
     </div>
   </div>
@@ -163,7 +144,6 @@ textarea{min-height:70px;resize:vertical}
   </div>
 </div>
 
-<!-- CALENDARIO -->
 <div class="card">
   <div class="sec">&#128197; Fecha y hora</div>
   <div class="cal-box">
@@ -179,7 +159,6 @@ textarea{min-height:70px;resize:vertical}
       <div class="ley"><div class="ley-punto" style="background:#1A3A6B"></div> Selecci&#243;n</div>
     </div>
   </div>
-
   <div id="seccion-slots" style="display:none">
     <div id="alerta-dia"></div>
     <div class="slots-titulo">&#9728;&#65039; Horario diurno <span class="badge b-dia">6 AM &#8211; 8 PM</span></div>
@@ -190,26 +169,25 @@ textarea{min-height:70px;resize:vertical}
     <div class="field" style="margin-top:12px">
       <label for="duracion">Duraci&#243;n estimada</label>
       <select id="duracion">
-        <option value="1">1 hora</option>
-        <option value="2" selected>2 horas</option>
-        <option value="3">3 horas</option>
-        <option value="4">4 horas</option>
-        <option value="todo">Todo el d&#237;a</option>
+        <option value="1 hora">1 hora</option>
+        <option value="2 horas" selected>2 horas</option>
+        <option value="3 horas">3 horas</option>
+        <option value="4 horas">4 horas</option>
+        <option value="Todo el dia">Todo el d&#237;a</option>
       </select>
     </div>
   </div>
 </div>
 
-<!-- ACTIVIDAD -->
 <div class="card">
   <div class="sec">&#127991;&#65039; Tipo de actividad</div>
   <div class="act-grid">
-    <button class="act-btn" onclick="selActividad(this,'reunion','true')"><span class="act-ico">&#128101;</span><span><span class="act-nom">Reuni&#243;n social</span><span class="act-sub">Visitas, familia</span></span></button>
-    <button class="act-btn" onclick="selActividad(this,'ejercicio','false')"><span class="act-ico">&#127939;</span><span><span class="act-nom">Ejercicio / yoga</span><span class="act-sub">Solo diurno &#183; m&#225;x. 9 PM</span></span></button>
-    <button class="act-btn" onclick="selActividad(this,'asado','true')"><span class="act-ico">&#128293;</span><span><span class="act-nom">Asado / parrilla</span><span class="act-sub">Reuni&#243;n con asador</span></span></button>
-    <button class="act-btn" onclick="selActividad(this,'desayuno','false')"><span class="act-ico">&#9749;</span><span><span class="act-nom">Desayuno / almuerzo</span><span class="act-sub">Comida al aire libre</span></span></button>
-    <button class="act-btn" onclick="selActividad(this,'privado','true')"><span class="act-ico">&#127881;</span><span><span class="act-nom">Evento privado</span><span class="act-sub">Celebraci&#243;n, cumplea&#241;os</span></span></button>
-    <button class="act-btn" onclick="selActividad(this,'otro','true')"><span class="act-ico">&#10024;</span><span><span class="act-nom">Otro</span><span class="act-sub">Especifica abajo</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Reunion social','true')"><span class="act-ico">&#128101;</span><span><span class="act-nom">Reuni&#243;n social</span><span class="act-sub">Visitas, familia</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Ejercicio / yoga','false')"><span class="act-ico">&#127939;</span><span><span class="act-nom">Ejercicio / yoga</span><span class="act-sub">Solo diurno &#183; m&#225;x. 9 PM</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Asado / parrilla','true')"><span class="act-ico">&#128293;</span><span><span class="act-nom">Asado / parrilla</span><span class="act-sub">Reuni&#243;n con asador</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Desayuno / almuerzo','false')"><span class="act-ico">&#9749;</span><span><span class="act-nom">Desayuno / almuerzo</span><span class="act-sub">Comida al aire libre</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Evento privado','true')"><span class="act-ico">&#127881;</span><span><span class="act-nom">Evento privado</span><span class="act-sub">Celebraci&#243;n, cumplea&#241;os</span></span></button>
+    <button class="act-btn" onclick="selActividad(this,'Otro','true')"><span class="act-ico">&#10024;</span><span><span class="act-nom">Otro</span><span class="act-sub">Especifica abajo</span></span></button>
   </div>
   <div id="aviso-ejercicio" style="display:none">
     <div class="alerta a-warn" style="margin-top:8px"><span class="alerta-ico">&#9888;&#65039;</span><span>El ejercicio solo est&#225; permitido hasta las 9:00 PM. Respeta los niveles de m&#250;sica.</span></div>
@@ -220,10 +198,10 @@ textarea{min-height:70px;resize:vertical}
   <div class="field" style="margin-top:12px">
     <label for="personas">N&#250;mero aproximado de personas</label>
     <select id="personas">
-      <option value="1-2">1 &#8211; 2 personas</option>
-      <option value="3-5">3 &#8211; 5 personas</option>
-      <option value="6-10">6 &#8211; 10 personas</option>
-      <option value="11+">M&#225;s de 10 personas</option>
+      <option value="1-2 personas">1 &#8211; 2 personas</option>
+      <option value="3-5 personas">3 &#8211; 5 personas</option>
+      <option value="6-10 personas">6 &#8211; 10 personas</option>
+      <option value="Mas de 10 personas">M&#225;s de 10 personas</option>
     </select>
   </div>
   <div class="field">
@@ -232,53 +210,47 @@ textarea{min-height:70px;resize:vertical}
   </div>
 </div>
 
-<!-- NORMAS -->
 <div class="card">
   <div class="sec">&#128203; Normas de uso &#8212; Cap&#237;tulo VI</div>
-
   <div class="norma-tog" onclick="abrirNorma(this,'n61')">
-    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.1 Condiciones generales de uso</span>
-    <span style="font-size:11px;color:#94A3B8">Ver normas</span>
+    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.1 Condiciones generales</span>
+    <span style="font-size:11px;color:#94A3B8">Ver</span>
   </div>
   <div class="norma-cuerpo" id="n61">
-    <div class="norma-fila"><span class="check">&#10003;</span><span>Al finalizar, dejar la terraza en completo orden y aseo. Recoger todos los elementos llevados.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>No dejar basuras, botellas, vasos ni ning&#250;n tipo de residuo.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Dejar la terraza en completo orden y aseo al finalizar.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>No dejar basuras, botellas, vasos ni residuos.</span></div>
     <div class="norma-fila"><span class="check">&#10003;</span><span>El mobiliario com&#250;n debe devolverse a su lugar.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>No realizar instalaciones permanentes sin autorizaci&#243;n.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>Los arrendatarios deben solicitar la llave con anticipaci&#243;n al administrador.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>No instalaciones permanentes sin autorizaci&#243;n.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Arrendatarios deben solicitar la llave con anticipaci&#243;n.</span></div>
   </div>
-
   <div class="norma-tog" onclick="abrirNorma(this,'n62')">
-    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.2 Uso para ejercicio f&#237;sico</span>
-    <span style="font-size:11px;color:#94A3B8">Ver normas</span>
+    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.2 Ejercicio f&#237;sico</span>
+    <span style="font-size:11px;color:#94A3B8">Ver</span>
   </div>
   <div class="norma-cuerpo" id="n62">
-    <div class="norma-fila"><span class="check">&#10003;</span><span>El ejercicio f&#237;sico es permitido solo en horario diurno.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>Si se usa m&#250;sica, respetar los niveles establecidos por ley.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>No usar la terraza para ejercicio a partir de las 9:00 PM.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Solo en horario diurno.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Respetar niveles de m&#250;sica establecidos por ley.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>No usar la terraza para ejercicio despu&#233;s de las 9 PM.</span></div>
   </div>
-
   <div class="norma-tog" onclick="abrirNorma(this,'n63')">
-    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.3 Puerta de la terraza</span>
-    <span style="font-size:11px;color:#94A3B8">Ver normas</span>
+    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.3 Puerta</span>
+    <span style="font-size:11px;color:#94A3B8">Ver</span>
   </div>
   <div class="norma-cuerpo" id="n63">
-    <div class="alerta a-warn" style="margin:0"><span class="alerta-ico">&#9888;&#65039;</span><span>Cuando la terraza no est&#233; en uso, la puerta DEBE permanecer cerrada con llave.</span></div>
+    <div class="alerta a-warn" style="margin:0"><span class="alerta-ico">&#9888;&#65039;</span><span>Cuando no est&#233; en uso, la puerta DEBE permanecer cerrada con llave.</span></div>
   </div>
-
   <div class="norma-tog norma-ult" onclick="abrirNorma(this,'n64')">
-    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.4 Eventos en terraza</span>
-    <span style="font-size:11px;color:#94A3B8">Ver normas</span>
+    <span class="norma-tog-txt"><span class="flecha">&#9658;</span> 6.4 Eventos</span>
+    <span style="font-size:11px;color:#94A3B8">Ver</span>
   </div>
   <div class="norma-cuerpo" id="n64">
-    <div class="norma-fila"><span class="check">&#10003;</span><span>Para realizar eventos, diligenciar este formulario previamente.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>Reuniones deben finalizar antes de las 11 PM entre semana y antes de la 1 AM los viernes y s&#225;bados.</span></div>
-    <div class="norma-fila"><span class="check">&#10003;</span><span>El residente es responsable del orden, aseo y cualquier da&#241;o durante el evento.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Diligenciar este formulario previamente.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>Hasta las 11 PM entre semana y 1 AM viernes y s&#225;bados.</span></div>
+    <div class="norma-fila"><span class="check">&#10003;</span><span>El residente responde por orden, aseo y da&#241;os.</span></div>
   </div>
-
   <div class="acepto-box">
     <input type="checkbox" id="acepto" onchange="verificar()">
-    <label for="acepto">He le&#237;do y acepto las normas del Cap&#237;tulo VI. Entiendo que soy responsable del estado de la terraza durante y despu&#233;s de mi uso.</label>
+    <label for="acepto">He le&#237;do y acepto las normas del Cap&#237;tulo VI. Soy responsable del estado de la terraza durante y despu&#233;s de mi uso.</label>
   </div>
 </div>
 
@@ -287,28 +259,26 @@ textarea{min-height:70px;resize:vertical}
 </button>
 </div>
 
-<!-- CONFIRMACION -->
 <div class="confirmacion" id="confirmacion">
   <div class="conf-ico">&#9989;</div>
   <div class="conf-tit">&#161;Reserva registrada!</div>
-  <div class="conf-sub">La administraci&#243;n recibir&#225; tu solicitud.</div>
+  <div class="conf-sub">Guardada en el sistema. La administraci&#243;n puede verla en Google Sheets.</div>
   <div class="conf-det" id="conf-det"></div>
   <button class="btn-nueva" onclick="nuevaReserva()">Hacer otra reserva</button>
 </div>
 
-<!-- LISTA -->
 <div class="card" style="margin-top:10px">
   <div class="sec">&#128203; Reservas registradas</div>
-  <div id="lista-reservas"><div class="vacio">&#128198; A&#250;n no hay reservas registradas</div></div>
+  <div id="lista-reservas"><div class="cargando">&#128197; Cargando reservas...</div></div>
 </div>
 
 <script>
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzLeLffn7b8Ih9CC5P5TjU5XW58nbdkYO426WlVKdXRT6sLd_XIrkiPHUBLwGLGPqfdcA/exec';
 var MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 var DIAS_CORTOS = ['Dom','Lun','Mar','Mie','Jue','Vie','Sab'];
 var SLOTS_DIA = ['6:00 AM','7:00 AM','8:00 AM','9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM','6:00 PM','7:00 PM','8:00 PM'];
 var SLOTS_NOCHE_SEMANA = ['9:00 PM','10:00 PM','11:00 PM'];
 var SLOTS_NOCHE_FIN = ['9:00 PM','10:00 PM','11:00 PM','12:00 AM','1:00 AM'];
-var ETIQUETAS = {reunion:'Reunion social',ejercicio:'Ejercicio / yoga',asado:'Asado / parrilla',desayuno:'Desayuno / almuerzo',privado:'Evento privado',otro:'Otro'};
 
 var anio = new Date().getFullYear();
 var mes = new Date().getMonth();
@@ -319,81 +289,64 @@ var tipoSeleccionado = '';
 var esNochePermitida = true;
 var reservas = [];
 
-function dosDigitos(n) {
-  return n < 10 ? '0' + n : '' + n;
-}
+function dosDigitos(n) { return n < 10 ? '0' + n : '' + n; }
+function esFinde(y, m, d) { var dia = new Date(y, m, d).getDay(); return dia === 5 || dia === 6; }
 
-function esFinde(y, m, d) {
-  var dia = new Date(y, m, d).getDay();
-  return dia === 5 || dia === 6;
+function cargarReservas() {
+  var el = document.getElementById('lista-reservas');
+  el.innerHTML = '<div class="cargando">&#128197; Cargando reservas...</div>';
+  var script = document.createElement('script');
+  window._cbReservas = function(data) {
+    reservas = [];
+    for (var i = 0; i < data.length; i++) {
+      var r = data[i];
+      if (r.fecha) reservas.push({ clave: r.fecha, slot: r.slot, apt: r.apt, nombre: r.nombre, tipo: r.tipo, personas: r.personas });
+    }
+    renderCalendario();
+    renderLista();
+  };
+  script.src = SCRIPT_URL + '?callback=_cbReservas';
+  script.onerror = function() {
+    el.innerHTML = '<div class="vacio">&#128198; No se pudieron cargar las reservas</div>';
+  };
+  document.head.appendChild(script);
 }
 
 function renderCalendario() {
-  var titulo = document.getElementById('cal-titulo');
-  titulo.textContent = MESES[mes] + ' ' + anio;
-
+  document.getElementById('cal-titulo').textContent = MESES[mes] + ' ' + anio;
   var contenedor = document.getElementById('cal-dias');
   contenedor.innerHTML = '';
-
-  var i, el, txt;
-
-  // Encabezados días
+  var i, el;
   for (i = 0; i < DIAS_CORTOS.length; i++) {
     el = document.createElement('div');
     el.className = 'cal-nombre';
     el.textContent = DIAS_CORTOS[i];
     contenedor.appendChild(el);
   }
-
   var primerDia = new Date(anio, mes, 1).getDay();
   var totalDias = new Date(anio, mes + 1, 0).getDate();
   var hoy = new Date();
-  var hoyAnio = hoy.getFullYear();
-  var hoyMes = hoy.getMonth();
-  var hoyDia = hoy.getDate();
-
-  // Celdas vacías antes
+  var hoyA = hoy.getFullYear(), hoyM = hoy.getMonth(), hoyD = hoy.getDate();
   for (i = 0; i < primerDia; i++) {
-    el = document.createElement('div');
-    el.className = 'dia vacio';
-    contenedor.appendChild(el);
+    el = document.createElement('div'); el.className = 'dia vacio'; contenedor.appendChild(el);
   }
-
-  // Días del mes
   for (var d = 1; d <= totalDias; d++) {
     el = document.createElement('div');
     el.className = 'dia';
     el.textContent = d;
-
     var fechaActual = new Date(anio, mes, d);
-    var hoyFecha = new Date(hoyAnio, hoyMes, hoyDia);
+    var hoyFecha = new Date(hoyA, hoyM, hoyD);
     var esPasado = fechaActual < hoyFecha;
     var clave = anio + '-' + dosDigitos(mes + 1) + '-' + dosDigitos(d);
     var tieneReserva = false;
     for (var r = 0; r < reservas.length; r++) {
       if (reservas[r].clave === clave) { tieneReserva = true; break; }
     }
-
-    if (esPasado) {
-      el.className = 'dia pasado';
-    } else if (tieneReserva) {
-      el.className = 'dia reservado';
-    }
-
-    if (d === hoyDia && mes === hoyMes && anio === hoyAnio) {
-      el.className += ' hoy';
-    }
-
-    if (diaSeleccionado && diaSeleccionado.d === d && diaSeleccionado.m === mes && diaSeleccionado.y === anio) {
-      el.className = 'dia seleccionado';
-    }
-
-    if (!esPasado) {
-      (function(dia) {
-        el.onclick = function() { clickDia(dia); };
-      })(d);
-    }
-
+    if (esPasado) { el.className = 'dia pasado'; }
+    else if (tieneReserva) { el.className = 'dia reservado'; }
+    if (d === hoyD && mes === hoyM && anio === hoyA) { el.className += ' hoy'; }
+    if (diaSeleccionado && diaSeleccionado.d === d && diaSeleccionado.m === mes && diaSeleccionado.y === anio) { el.className = 'dia seleccionado'; }
+    if (!esPasado) { (function(dia){ el.onclick = function(){ clickDia(dia); }; })(d); }
     contenedor.appendChild(el);
   }
 }
@@ -409,7 +362,6 @@ function clickDia(d) {
 
 function renderSlots() {
   if (!diaSeleccionado) return;
-
   var d = diaSeleccionado.d, m = diaSeleccionado.m, y = diaSeleccionado.y;
   var finde = esFinde(y, m, d);
   var clave = y + '-' + dosDigitos(m + 1) + '-' + dosDigitos(d);
@@ -417,53 +369,34 @@ function renderSlots() {
   for (var r = 0; r < reservas.length; r++) {
     if (reservas[r].clave === clave) tomados.push(reservas[r].slot);
   }
-  var esEjercicio = tipoSeleccionado === 'ejercicio';
+  var esEjercicio = tipoSeleccionado === 'Ejercicio / yoga';
   var slotsNoche = finde ? SLOTS_NOCHE_FIN : SLOTS_NOCHE_SEMANA;
-
   document.getElementById('badge-noche').textContent = finde ? 'Vie/Sab hasta 1:00 AM' : 'Entre semana hasta 11 PM';
   document.getElementById('nota-noche').style.display = esEjercicio ? 'block' : 'none';
-
   var alertaEl = document.getElementById('alerta-dia');
-  if (finde) {
-    alertaEl.innerHTML = '<div class="alerta a-info" style="margin:10px 0"><span class="alerta-ico">&#127769;</span><span>Viernes o s&#225;bado &#8212; el evento puede extenderse hasta la 1:00 AM.</span></div>';
-  } else {
-    alertaEl.innerHTML = '<div class="alerta a-warn" style="margin:10px 0"><span class="alerta-ico">&#9200;</span><span>Entre semana &#8212; las reuniones deben finalizar antes de las 11:00 PM.</span></div>';
-  }
-
+  alertaEl.innerHTML = finde
+    ? '<div class="alerta a-info" style="margin:10px 0"><span class="alerta-ico">&#127769;</span><span>Viernes o sabado: el evento puede extenderse hasta la 1:00 AM.</span></div>'
+    : '<div class="alerta a-warn" style="margin:10px 0"><span class="alerta-ico">&#9200;</span><span>Entre semana: las reuniones deben finalizar antes de las 11:00 PM.</span></div>';
   crearSlots('slots-dia', SLOTS_DIA, false, tomados, esEjercicio);
   crearSlots('slots-noche', slotsNoche, true, tomados, esEjercicio);
 }
 
-function crearSlots(idContenedor, lista, esNoche, tomados, esEjercicio) {
-  var contenedor = document.getElementById(idContenedor);
+function crearSlots(idC, lista, esNoche, tomados, esEjercicio) {
+  var contenedor = document.getElementById(idC);
   contenedor.innerHTML = '';
-
   for (var i = 0; i < lista.length; i++) {
     (function(slot) {
       var esTomado = false;
-      for (var t = 0; t < tomados.length; t++) {
-        if (tomados[t] === slot) { esTomado = true; break; }
-      }
+      for (var t = 0; t < tomados.length; t++) { if (tomados[t] === slot) { esTomado = true; break; } }
       var bloqueado = esNoche && esEjercicio;
-
       var btn = document.createElement('button');
       btn.textContent = slot;
-
-      if (esTomado) {
-        btn.className = 'slot ocupado';
-        btn.disabled = true;
-      } else if (bloqueado) {
-        btn.className = 'slot bloq' + (esNoche ? ' noche' : '');
-        btn.disabled = true;
-      } else {
+      if (esTomado) { btn.className = 'slot ocupado'; btn.disabled = true; }
+      else if (bloqueado) { btn.className = 'slot bloq' + (esNoche ? ' noche' : ''); btn.disabled = true; }
+      else {
         btn.className = 'slot' + (esNoche ? ' noche' : '') + (slotSeleccionado === slot ? ' sel' : '');
-        btn.onclick = function() {
-          slotSeleccionado = slot;
-          renderSlots();
-          verificar();
-        };
+        btn.onclick = function() { slotSeleccionado = slot; renderSlots(); verificar(); };
       }
-
       contenedor.appendChild(btn);
     })(lista[i]);
   }
@@ -486,26 +419,22 @@ function selApt(btn, apt) {
 
 function cambioCalidad() {
   var val = document.getElementById('calidad').value;
-  document.getElementById('aviso-arr').style.display = val === 'arrendatario' ? 'block' : 'none';
+  document.getElementById('aviso-arr').style.display = val === 'Arrendatario' ? 'block' : 'none';
   verificar();
 }
 
 function selActividad(btn, tipo, permiteNoche) {
-  var botones = document.getElementById('area-form').getElementsByClassName('act-btn');
+  var botones = document.getElementsByClassName('act-btn');
   for (var i = 0; i < botones.length; i++) botones[i].className = 'act-btn';
   btn.className = 'act-btn sel';
   tipoSeleccionado = tipo;
   esNochePermitida = permiteNoche === 'true';
-
-  document.getElementById('aviso-ejercicio').style.display = tipo === 'ejercicio' ? 'block' : 'none';
+  document.getElementById('aviso-ejercicio').style.display = tipo === 'Ejercicio / yoga' ? 'block' : 'none';
   var avisoN = document.getElementById('aviso-noche');
-  if (tipo !== 'ejercicio' && esNochePermitida) {
+  if (tipo !== 'Ejercicio / yoga' && esNochePermitida) {
     avisoN.style.display = 'block';
     document.getElementById('aviso-noche-txt').textContent = 'Esta actividad puede realizarse en horario nocturno. Entre semana hasta las 11 PM, viernes y sabados hasta la 1 AM.';
-  } else {
-    avisoN.style.display = 'none';
-  }
-
+  } else { avisoN.style.display = 'none'; }
   if (diaSeleccionado) renderSlots();
   verificar();
 }
@@ -513,53 +442,44 @@ function selActividad(btn, tipo, permiteNoche) {
 function abrirNorma(tog, idCuerpo) {
   var cuerpo = document.getElementById(idCuerpo);
   var abierto = cuerpo.className.indexOf('abierto') >= 0;
-  if (abierto) {
-    cuerpo.className = 'norma-cuerpo';
-    tog.className = tog.className.replace(' abierto', '');
-  } else {
-    cuerpo.className = 'norma-cuerpo abierto';
-    if (tog.className.indexOf('abierto') < 0) tog.className += ' abierto';
-  }
+  cuerpo.className = abierto ? 'norma-cuerpo' : 'norma-cuerpo abierto';
+  tog.className = abierto ? tog.className.replace(' abierto','') : (tog.className.indexOf('abierto') < 0 ? tog.className + ' abierto' : tog.className);
 }
 
 function verificar() {
-  var nombre = document.getElementById('nombre').value;
-  var calidad = document.getElementById('calidad').value;
-  var acepto = document.getElementById('acepto').checked;
-  var ok = aptSeleccionado && nombre.length > 0 && calidad && diaSeleccionado && slotSeleccionado && tipoSeleccionado && acepto;
+  var ok = aptSeleccionado && document.getElementById('nombre').value.length > 0 && document.getElementById('calidad').value && diaSeleccionado && slotSeleccionado && tipoSeleccionado && document.getElementById('acepto').checked;
   document.getElementById('btn-enviar').disabled = !ok;
 }
 
 function enviar() {
+  var btn = document.getElementById('btn-enviar');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
   var clave = diaSeleccionado.y + '-' + dosDigitos(diaSeleccionado.m + 1) + '-' + dosDigitos(diaSeleccionado.d);
   var nombre = document.getElementById('nombre').value;
   var calidad = document.getElementById('calidad').value;
-  var duracion = document.getElementById('duracion').options[document.getElementById('duracion').selectedIndex].text;
+  var duracion = document.getElementById('duracion').value;
   var personas = document.getElementById('personas').value;
   var finde = esFinde(diaSeleccionado.y, diaSeleccionado.m, diaSeleccionado.d);
-
-  reservas.push({
-    apt: aptSeleccionado, nombre: nombre, calidad: calidad,
-    clave: clave, slot: slotSeleccionado, duracion: duracion,
-    personas: personas, tipo: ETIQUETAS[tipoSeleccionado]
-  });
-
-  var fechaStr = diaSeleccionado.d + ' de ' + MESES[diaSeleccionado.m] + ' de ' + diaSeleccionado.y;
-  var limiteHora = finde ? '1:00 AM' : '11:00 PM';
-
-  document.getElementById('conf-det').innerHTML =
-    '<div class="conf-fila"><span>Apartamento</span><span>' + aptSeleccionado + '</span></div>' +
-    '<div class="conf-fila"><span>Residente</span><span>' + nombre + '</span></div>' +
-    '<div class="conf-fila"><span>Fecha</span><span>' + fechaStr + '</span></div>' +
-    '<div class="conf-fila"><span>Hora inicio</span><span>' + slotSeleccionado + '</span></div>' +
-    '<div class="conf-fila"><span>Duracion</span><span>' + duracion + '</span></div>' +
-    '<div class="conf-fila"><span>Actividad</span><span>' + ETIQUETAS[tipoSeleccionado] + '</span></div>' +
-    '<div class="conf-fila"><span>Personas</span><span>' + personas + '</span></div>' +
-    '<div class="conf-fila"><span>Hora limite</span><span>' + limiteHora + '</span></div>';
-
-  document.getElementById('area-form').style.display = 'none';
-  document.getElementById('confirmacion').className = 'confirmacion visible';
-  renderLista();
+  var datos = { apt: aptSeleccionado, nombre: nombre, calidad: calidad, fecha: clave, slot: slotSeleccionado, duracion: duracion, tipo: tipoSeleccionado, personas: personas };
+  var img = new Image();
+  img.src = SCRIPT_URL + '?apt=' + encodeURIComponent(datos.apt) + '&nombre=' + encodeURIComponent(datos.nombre) + '&calidad=' + encodeURIComponent(datos.calidad) + '&fecha=' + encodeURIComponent(datos.fecha) + '&slot=' + encodeURIComponent(datos.slot) + '&duracion=' + encodeURIComponent(datos.duracion) + '&tipo=' + encodeURIComponent(datos.tipo) + '&personas=' + encodeURIComponent(datos.personas) + '&action=save';
+  img.onload = img.onerror = function() {
+    reservas.push({ clave: clave, slot: slotSeleccionado, apt: aptSeleccionado, nombre: nombre, tipo: tipoSeleccionado, personas: personas });
+    var fechaStr = diaSeleccionado.d + ' de ' + MESES[diaSeleccionado.m] + ' de ' + diaSeleccionado.y;
+    document.getElementById('conf-det').innerHTML =
+      '<div class="conf-fila"><span>Apartamento</span><span>' + aptSeleccionado + '</span></div>' +
+      '<div class="conf-fila"><span>Residente</span><span>' + nombre + '</span></div>' +
+      '<div class="conf-fila"><span>Fecha</span><span>' + fechaStr + '</span></div>' +
+      '<div class="conf-fila"><span>Hora inicio</span><span>' + slotSeleccionado + '</span></div>' +
+      '<div class="conf-fila"><span>Duracion</span><span>' + duracion + '</span></div>' +
+      '<div class="conf-fila"><span>Actividad</span><span>' + tipoSeleccionado + '</span></div>' +
+      '<div class="conf-fila"><span>Personas</span><span>' + personas + '</span></div>' +
+      '<div class="conf-fila"><span>Hora limite</span><span>' + (finde ? '1:00 AM' : '11:00 PM') + '</span></div>';
+    document.getElementById('area-form').style.display = 'none';
+    document.getElementById('confirmacion').className = 'confirmacion visible';
+    renderLista();
+  };
 }
 
 function nuevaReserva() {
@@ -578,16 +498,14 @@ function nuevaReserva() {
   document.getElementById('confirmacion').className = 'confirmacion';
   document.getElementById('area-form').style.display = 'block';
   document.getElementById('btn-enviar').disabled = true;
+  document.getElementById('btn-enviar').textContent = '&#128197; Enviar solicitud de reserva';
   anio = new Date().getFullYear(); mes = new Date().getMonth();
-  renderCalendario();
+  cargarReservas();
 }
 
 function renderLista() {
   var el = document.getElementById('lista-reservas');
-  if (reservas.length === 0) {
-    el.innerHTML = '<div class="vacio">&#128198; Aun no hay reservas registradas</div>';
-    return;
-  }
+  if (reservas.length === 0) { el.innerHTML = '<div class="vacio">&#128198; Aun no hay reservas registradas</div>'; return; }
   var sorted = reservas.slice().sort(function(a, b) { return a.clave > b.clave ? 1 : -1; });
   var html = '';
   for (var i = 0; i < sorted.length; i++) {
@@ -596,14 +514,13 @@ function renderLista() {
     var dStr = parseInt(partes[2]) + ' de ' + MESES[parseInt(partes[1]) - 1];
     html += '<div class="res-item"><div class="res-punto"></div><div>' +
       '<div style="display:flex;align-items:center;gap:7px"><span class="res-apt">Apt. ' + r.apt + '</span><span class="res-nom">' + r.nombre + '</span></div>' +
-      '<div class="res-meta">' + dStr + ' &middot; ' + r.slot + ' &middot; ' + r.tipo + ' &middot; ' + r.personas + ' personas</div>' +
+      '<div class="res-meta">' + dStr + ' &middot; ' + r.slot + ' &middot; ' + r.tipo + ' &middot; ' + r.personas + '</div>' +
       '</div></div>';
   }
   el.innerHTML = html;
 }
 
-renderCalendario();
-renderLista();
+cargarReservas();
 </script>
 </body>
 </html>
